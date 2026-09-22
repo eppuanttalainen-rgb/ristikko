@@ -1,0 +1,18 @@
+Mummon Ristikko v0.7.5 READY validation – 2026-09-22
+
+OK production_wordbank validation
+OK production_clue_bank validation
+OK production_clue_variants validation
+OK 61 symmetry-distinct geometry families
+OK Factory reference regressions
+OK export pipeline regression
+OK candidate pool regression
+OK pre-review regression
+OK v0.3.37 smoke: 95 visible / 101 defined; JS valid; Finnish keyboard present
+
+Wordbank: 1713
+Geometry bank: 61
+Active baseline: 95 / 2915 entries / 1462 unique answers
+Exact active clue duplicates: 0
+Historical over-freeze exceptions: AKKU=4, ALA=4
+v0.7.5 batch: 186 entries / 173 unique / repeat 6.99% / capacity violations 0
