@@ -3,12 +3,12 @@
 Oma versionhallintarepositorio Mummon Ristikko -pelille.
 
 ## Nykyinen vakaa tila
-- Factory: v0.7.5 READY
-- Peli: v0.3.37
-- Julkaistavia ristikoita: 95 / 101
-- Jakauma: 30 Helppoa / 35 Keskitasoa / 30 Vaikeaa
-- Production-sanapankki: 1713 sanaa
-- Geometriapankki: 61 perhettä
+- Factory: v0.7.6 READY
+- Peli: v0.3.38
+- Julkaistavia ristikoita: 101 / 101
+- Jakauma: 32 Helppoa / 37 Keskitasoa / 32 Vaikeaa
+- Production-sanapankki: 1749 sanaa
+- Geometriapankki: 67 perhettä
 - Aktiivikirjaston vihjeduplikaatit: 0
 - Historialliset freeze-poikkeukset: AKKU=4, ALA=4
 
@@ -19,4 +19,5 @@ Oma versionhallintarepositorio Mummon Ristikko -pelille.
 - tuotantoon promotoidaan vain hyväksytyssä skeletonissa todella käytetty uusi sanasto
 - Drive READY-handoffit säilyvät täydellisinä palautuspisteinä GitHub-versionhallinnan rinnalla
 
-Seuraava tavoite: 95 -> 101, viimeinen julkaisutavoitteen erä.
+## Seuraava vaihe
+101 ristikon sisältötavoite on saavutettu. Seuraava päävaihe on release readiness: oikeiden laitteiden käytettävyystestaus, julkaisuympäristö, release candidate ja julkaisuun liittyvät tekniset/tietosuojatarkistukset.
