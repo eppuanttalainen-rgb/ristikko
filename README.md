@@ -2,40 +2,47 @@
 
 Oma versionhallintarepositorio Sanaristeys-pelille.
 
-## Brändi
-- Nimi: Sanaristeys
-- Alaotsikko: Suomalaiset ristikot
-- Release: v0.8.2 RC3
-- App shell: v0.3.41 RC3
-- Content: 2026.1 / 101 näkyvää ristikkoa
+## Nykyinen release-tila
+- Release handoff: v0.8.3 RC4
+- App shell: v0.3.42 RC4
+- Content: 2026.1
+- Visible puzzles: 101
+- Subtitle: Suomalaiset ristikot
 
 ## Sisältöbaseline
-- Factory: v0.7.6 READY (lukittu)
-- Sisältö: 101 / 101 ristikkoa
-- Jakauma: 32 Helppoa / 37 Keskitasoa / 32 Vaikeaa
-- Production-sanapankki: 1749 sanaa
-- Geometriapankki: 67 perhettä
+- Factory v0.7.6 READY (lukittu)
+- 101 / 101 ristikkoa
+- 32 Helppoa / 37 Keskitasoa / 32 Vaikeaa
+- Production-sanapankki: 1749
+- Geometriapankki: 67
 - Aktiivikirjaston vihjeduplikaatit: 0
 
-## RC3
-Ristikkosisältö on erotettu sovelluksesta. Tuleva normaali +6 ristikon päivitys voidaan julkaista uutena versionoituna `content/current.js`-pakettina ilman käyttöliittymän tai tallennuslogiikan muutosta.
-
-Sisältöversio tallennetaan erikseen pelaajan etenemisestä. Uusi sisältöpaketti voi ilmoittaa `addedPuzzleIds`-listan, jolloin peli pystyy näyttämään automaattisesti ilmoituksen uusista ristikoista.
-
-PWA-service worker hakee sisältöpaketin network-first-periaatteella ja säilyttää viimeisen varmennetun version offline-käyttöä varten.
-
-## Ansaintavalmius
-RC3:ssa on erillinen, pois päältä oleva monetization bridge ja entitlement-tallennus. Ensimmäinen soft launch pysyy ilman mainoksia, seurantaa tai maksukirjastoja. Myöhemmin mainokset/premium voidaan toteuttaa ilman että ristikkodata tai etenemistallennukset sidotaan niihin.
+## RC4
+- ristikkosisältö on erotettu sovelluksesta
+- pieni +6 sisältöpäivitys ei vaadi app-shellin muuttamista
+- Tietosuoja-sivu lisätty
+- Uutta / päivityshistoria lisätty
+- palaute-linkki aktivoituu supportEmail-konfiguraatiolla
+- PWA/offline-rakenne valmis
+- mainokset, analytiikka ja maksut edelleen OFF
+- tuleva monetization bridge ja premium-entitlementit erotettu sisällöstä
 
 ## QA
-- content 2026.1: 101 visible / 107 defined
-- Sanaristeys release smoke: PASS
-- Finnish keyboard + JS syntax: PASS
-- mekaaninen content update -testi: PASS
-- duplicate puzzle ID protection: PASS
+- v0.3.42 release smoke: PASS
+- 101 visible / 107 defined
+- JS syntax: PASS
+- Finnish keyboard: PASS
+- content update candidate flow: PASS
+- duplicate ID protection: PASS
 - RC1 Desktop Chrome: PASS
 - RC1 Android quick smoke: PROVISIONAL PASS
-- RC3 tarvitsee vielä nopean laiteregression
-- iPhone Safari testataan HTTPS-hostatusta versiosta
+- Safari HTTPS smoke: pending
+
+## Seuraava portti
+1. Vahvista ja rekisteröi sanaristeys.fi, jos vapaa.
+2. Deploy WEB RC4 HTTPS-testiosoitteeseen.
+3. Safari + Chrome smoke.
+4. Luo erillinen tukiosoite (esim. tuki@sanaristeys.fi) ja aseta se app-configiin.
+5. Tee soft-launch-päätös.
 
 Täyttä julkaisemattoman pelin sisältöpakettia ei säilytetä tässä julkisessa repossa. Drive säilyttää täydet release-handoffit.
