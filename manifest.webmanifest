@@ -1,0 +1,12 @@
+{
+  "name": "Sanaristeys – suomalaiset ristikot",
+  "short_name": "Sanaristeys",
+  "description": "Suomalainen ristikkopeli, jossa on 101 sisältötarkistettua ristikkoa.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f0e4",
+  "theme_color": "#f6f0e4",
+  "lang": "fi",
+  "orientation": "any"
+}
