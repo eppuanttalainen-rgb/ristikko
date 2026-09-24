@@ -1,6 +1,12 @@
-# Mummon Ristikko
+# Sanaristeys
 
-Oma versionhallintarepositorio Mummon Ristikko -pelille.
+Oma versionhallintarepositorio Sanaristeys-pelille.
+
+## Brändi
+- Nimi: Sanaristeys
+- Alaotsikko: Suomalaiset ristikot
+- Release: v0.8.1 RC2
+- Peli: v0.3.40 RC2
 
 ## Sisältöbaseline
 - Factory: v0.7.6 READY (lukittu)
@@ -9,17 +15,18 @@ Oma versionhallintarepositorio Mummon Ristikko -pelille.
 - Production-sanapankki: 1749 sanaa
 - Geometriapankki: 67 perhettä
 - Aktiivikirjaston vihjeduplikaatit: 0
-- Historialliset freeze-poikkeukset: AKKU=4, ALA=4
 
-## Release-vaihe
-- Release handoff: v0.8.0 RC1
-- Peli: v0.3.39 RC1
-- Desktop Chrome manual QA: PASS
-- Android quick manual smoke: PROVISIONAL PASS
-- iPhone Safari hosted-URL QA: pending
-- Ristikkosisältö on sama kuin v0.7.6 READY -baselinessa.
+## RC2-muutokset
+- koko näkyvä brändi vaihdettu nimeen Sanaristeys
+- alaotsikko: Suomalaiset ristikot
+- etusivulle lisätty Tekijän sana -osio
+- RC1:n eteneminen migroidaan automaattisesti uusiin Sanaristeys-tallennusavaimiin
+- ristikkosisältöä ei muutettu
 
-RC1-parannukset: tallennuksen virheenkesto, nykyinen versioteksti, mobiilin pinch zoom, safe-area-tuki, ruudunlukija-/focus-parannukset. Ei ulkoisia verkkokutsuja, analytiikkaa tai cookieita.
+## QA-tila
+- RC1 Desktop Chrome: PASS
+- RC1 Android quick smoke: PROVISIONAL PASS
+- RC2 tarvitsee vielä nopean Android + desktop regression
+- iPhone Safari testataan myöhemmin HTTPS-hostatusta WEB RC2 -versiosta
 
-## Seuraava portti
-Valmistellaan hosted/web-app release -rakenne ja testataan iPhone Safari HTTPS-osoitteesta. Jos uusia P0/P1-löydöksiä ei tule, RC1 voidaan viedä release-candidate-final -päätökseen ilman RC2:ta.
+Täyttä julkaisemattoman pelin HTML:ää ei säilytetä tässä julkisessa repossa. Drive säilyttää täydet release-handoffit.
