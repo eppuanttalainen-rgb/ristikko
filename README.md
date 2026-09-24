@@ -14,9 +14,10 @@ Oma versionhallintarepositorio Mummon Ristikko -pelille.
 ## Release-vaihe
 - Release handoff: v0.8.0 RC1
 - Peli: v0.3.39 RC1
+- Android quick manual smoke: PROVISIONAL PASS (2026-09-24)
 - Ristikkosisältö on sama kuin v0.7.6 READY -baselinessa.
 
 RC1-parannukset: tallennuksen virheenkesto, nykyinen versioteksti, mobiilin pinch zoom, safe-area-tuki, ruudunlukija-/focus-parannukset. Ei ulkoisia verkkokutsuja, analytiikkaa tai cookieita.
 
 ## Seuraava portti
-Oikean Android-puhelimen ja desktop-selaimen manual QA. iPhone/Safari erittäin suositeltava. Mahdolliset löydökset korjataan RC2:een ilman sisältöbaselinen avaamista, ellei löydy todellista sisältövirhettä.
+Desktop-selaimen manual QA. iPhone/Safari erittäin suositeltava. Jos desktop on puhdas eikä P0/P1-löydöksiä tule, RC1 voidaan viedä release-candidate-final -päätökseen ilman RC2:ta.
