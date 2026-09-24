@@ -1,7 +1,7 @@
 {
-  "name": "Mummon Ristikko",
-  "short_name": "Ristikko",
-  "description": "Suomenkielinen ristikkopeli, jossa on 101 ristikkoa.",
+  "name": "Sanaristeys – suomalaiset ristikot",
+  "short_name": "Sanaristeys",
+  "description": "Suomalainen ristikkopeli, jossa on 101 sisältötarkistettua ristikkoa.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
