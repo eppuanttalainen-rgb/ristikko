@@ -3,9 +3,10 @@
 Oma versionhallintarepositorio Sanaristeys-pelille.
 
 ## Nykyinen release-tila
-- Release handoff: v0.8.3 RC4
-- App shell: v0.3.42 RC4
+- Release handoff: v0.8.4 RC5
+- App shell: v0.3.43 RC5
 - Content: 2026.1
+- Content format: JSON schema v1
 - Visible puzzles: 101
 - Subtitle: Suomalaiset ristikot
 
@@ -17,32 +18,38 @@ Oma versionhallintarepositorio Sanaristeys-pelille.
 - Geometriapankki: 67
 - Aktiivikirjaston vihjeduplikaatit: 0
 
-## RC4
-- ristikkosisältö on erotettu sovelluksesta
-- pieni +6 sisältöpäivitys ei vaadi app-shellin muuttamista
-- Tietosuoja-sivu lisätty
-- Uutta / päivityshistoria lisätty
-- palaute-linkki aktivoituu supportEmail-konfiguraatiolla
+## RC5
+- ristikkosisältö on puhdasta dataa: `content/current.json`
+- app shell ei suorita verkosta ladattavaa ristikkopäivityskoodia
+- +6 sisältöpäivitys ei vaadi app-shell-muutosta
+- remote sisältö voidaan cachettaa native-versiossa offline-käyttöä varten
+- bundled 101 ristikon paketti säilyy fallbackina
+- Tietosuoja + Uutta -sivut mukana
+- supportEmail-koukku valmiina
 - PWA/offline-rakenne valmis
-- mainokset, analytiikka ja maksut edelleen OFF
-- tuleva monetization bridge ja premium-entitlementit erotettu sisällöstä
+- mainokset, analytiikka ja maksut OFF
+- Capacitor 8 native-prep tehty erilliseen handoffiin
 
 ## QA
-- v0.3.42 release smoke: PASS
+- RC5 bundle regression: PASS
 - 101 visible / 107 defined
+- 3101 active entries
+- exact active clue duplicates: 0
 - JS syntax: PASS
-- Finnish keyboard: PASS
-- content update candidate flow: PASS
+- JSON schema/content: PASS
+- mechanical content update 101 -> 102: PASS
 - duplicate ID protection: PASS
+- standalone syntax: PASS
 - RC1 Desktop Chrome: PASS
 - RC1 Android quick smoke: PROVISIONAL PASS
 - Safari HTTPS smoke: pending
 
 ## Seuraava portti
 1. Vahvista ja rekisteröi sanaristeys.fi, jos vapaa.
-2. Deploy WEB RC4 HTTPS-testiosoitteeseen.
-3. Safari + Chrome smoke.
-4. Luo erillinen tukiosoite (esim. tuki@sanaristeys.fi) ja aseta se app-configiin.
-5. Tee soft-launch-päätös.
+2. Deploy WEB RC5 HTTPS-testiosoitteeseen.
+3. Safari + Chrome + Android quick regression.
+4. Luo erillinen tukiosoite (esim. tuki@sanaristeys.fi).
+5. Soft launch.
+6. Android Capacitor / Play closed test rinnalle.
 
 Täyttä julkaisemattoman pelin sisältöpakettia ei säilytetä tässä julkisessa repossa. Drive säilyttää täydet release-handoffit.
