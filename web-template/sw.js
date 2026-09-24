@@ -1,4 +1,4 @@
-const CACHE = 'mummon-ristikko-rc1-v1';
+const CACHE = 'sanaristeys-rc2-v1';
 const CORE = ['./', './index.html', './manifest.webmanifest'];
 
 self.addEventListener('install', event => {
