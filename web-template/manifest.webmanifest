@@ -1,0 +1,12 @@
+{
+  "name": "Mummon Ristikko",
+  "short_name": "Ristikko",
+  "description": "Suomenkielinen ristikkopeli, jossa on 101 ristikkoa.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f0e4",
+  "theme_color": "#f6f0e4",
+  "lang": "fi",
+  "orientation": "any"
+}
