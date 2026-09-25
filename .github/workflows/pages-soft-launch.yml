@@ -1,0 +1,52 @@
+name: Publish Sanaristeys soft launch
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/pages-soft-launch.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout soft-launch build
+        uses: actions/checkout@v6
+        with:
+          ref: soft-launch-rc5
+
+      - name: Prepare public site only
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp privacy.html _site/
+          cp updates.html _site/
+          cp manifest.webmanifest _site/
+          cp sw.js _site/
+          touch _site/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload public site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '_site'
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
