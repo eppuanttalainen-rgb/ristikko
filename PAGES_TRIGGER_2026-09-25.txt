@@ -1,0 +1,3 @@
+soft-launch trigger: 2026-09-25
+Pages source: GitHub Actions
+Purpose: retrigger RC5 Pages deployment after owner enablement.
