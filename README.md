@@ -30,6 +30,28 @@ Oma versionhallintarepositorio Sanaristeys-pelille.
 - mainokset, analytiikka ja maksut OFF
 - Capacitor 8 native-prep tehty erilliseen handoffiin
 
+## Soft launch / GitHub Pages
+Branch: `soft-launch-rc5`
+
+Valmis:
+- RC5 standalone build -> index.html
+- privacy.html
+- updates.html
+- manifest.webmanifest
+- sw.js
+- GitHub Pages workflow
+- workflow julkaisee vain varsinaisen sivuston tiedostot erillisen `_site`-hakemiston kautta
+
+GitHub Actions -run käynnistyy oikein, mutta pysähtyy tällä hetkellä `actions/configure-pages`-vaiheeseen, koska repository Pages ei ole vielä käytössä.
+
+Tarvittava omistajan asetus:
+`Settings -> Pages -> Build and deployment -> Source: GitHub Actions`
+
+Tämän jälkeen uusi push branchiin käynnistää valmiin deployn.
+
+## PWA
+Manifest + service worker ovat mukana. Lopulliseen asennuskelpoiseen PWA-brändiin puuttuvat vielä 192x192 ja 512x512 sovellusikonit. Chromiumin installability-vaatimukset täytetään ikonivaiheessa ennen varsinaista PWA-markkinointia.
+
 ## QA
 - RC5 bundle regression: PASS
 - 101 visible / 107 defined
@@ -45,11 +67,12 @@ Oma versionhallintarepositorio Sanaristeys-pelille.
 - Safari HTTPS smoke: pending
 
 ## Seuraava portti
-1. Vahvista ja rekisteröi sanaristeys.fi, jos vapaa.
-2. Deploy WEB RC5 HTTPS-testiosoitteeseen.
-3. Safari + Chrome + Android quick regression.
-4. Luo erillinen tukiosoite (esim. tuki@sanaristeys.fi).
-5. Soft launch.
-6. Android Capacitor / Play closed test rinnalle.
+1. GitHub Pages Source -> GitHub Actions.
+2. Trigger soft-launch-rc5 deploy.
+3. Safari + Chrome + Android HTTPS regression.
+4. Vahvista ja rekisteröi sanaristeys.fi.
+5. Luo tuki@sanaristeys.fi.
+6. Tee lopullinen app icon / PWA icon set.
+7. Soft launch.
 
-Täyttä julkaisemattoman pelin sisältöpakettia ei säilytetä tässä julkisessa repossa. Drive säilyttää täydet release-handoffit.
+Täyttä tuotannon kehityspolkua ei julkaista Pagesiin. Drive säilyttää täydet release-handoffit.
