@@ -9,6 +9,8 @@ Oma versionhallintarepositorio Sanaristeys-pelille.
 - Content format: JSON schema v1
 - Visible puzzles: 101
 - Subtitle: Suomalaiset ristikot
+- HTTPS soft launch: LIVE
+- Test URL: https://eppuanttalainen-rgb.github.io/ristikko/
 
 ## Sisältöbaseline
 - Factory v0.7.6 READY (lukittu)
@@ -31,26 +33,22 @@ Oma versionhallintarepositorio Sanaristeys-pelille.
 - Capacitor 8 native-prep tehty erilliseen handoffiin
 
 ## Soft launch / GitHub Pages
-Branch: `soft-launch-rc5`
+Public site is deployed through GitHub Actions from main, while the actual release build is checked out from `soft-launch-rc5`.
 
-Valmis:
-- RC5 standalone build -> index.html
+Public artifact contains only:
+- index.html
 - privacy.html
 - updates.html
 - manifest.webmanifest
 - sw.js
-- GitHub Pages workflow
-- workflow julkaisee vain varsinaisen sivuston tiedostot erillisen `_site`-hakemiston kautta
 
-GitHub Actions -run käynnistyy oikein, mutta pysähtyy tällä hetkellä `actions/configure-pages`-vaiheeseen, koska repository Pages ei ole vielä käytössä.
-
-Tarvittava omistajan asetus:
-`Settings -> Pages -> Build and deployment -> Source: GitHub Actions`
-
-Tämän jälkeen uusi push branchiin käynnistää valmiin deployn.
+Latest successful Pages run:
+- run id: 36151520668
+- conclusion: success
+- deployed URL: https://eppuanttalainen-rgb.github.io/ristikko/
 
 ## PWA
-Manifest + service worker ovat mukana. Lopulliseen asennuskelpoiseen PWA-brändiin puuttuvat vielä 192x192 ja 512x512 sovellusikonit. Chromiumin installability-vaatimukset täytetään ikonivaiheessa ennen varsinaista PWA-markkinointia.
+Manifest + service worker ovat mukana. Lopulliseen asennuskelpoiseen PWA-brändiin puuttuvat vielä 192x192 ja 512x512 sovellusikonit.
 
 ## QA
 - RC5 bundle regression: PASS
@@ -62,17 +60,17 @@ Manifest + service worker ovat mukana. Lopulliseen asennuskelpoiseen PWA-brändi
 - mechanical content update 101 -> 102: PASS
 - duplicate ID protection: PASS
 - standalone syntax: PASS
+- GitHub Pages HTTPS deploy: PASS
 - RC1 Desktop Chrome: PASS
 - RC1 Android quick smoke: PROVISIONAL PASS
-- Safari HTTPS smoke: pending
+- Safari HTTPS smoke: NEXT
 
 ## Seuraava portti
-1. GitHub Pages Source -> GitHub Actions.
-2. Trigger soft-launch-rc5 deploy.
-3. Safari + Chrome + Android HTTPS regression.
-4. Vahvista ja rekisteröi sanaristeys.fi.
-5. Luo tuki@sanaristeys.fi.
-6. Tee lopullinen app icon / PWA icon set.
-7. Soft launch.
+1. Safari HTTPS smoke live-URL:sta.
+2. Chrome + Android HTTPS quick regression.
+3. Vahvista ja rekisteröi sanaristeys.fi.
+4. Luo tuki@sanaristeys.fi.
+5. Tee lopullinen app icon / PWA icon set.
+6. Soft launch.
 
-Täyttä tuotannon kehityspolkua ei julkaista Pagesiin. Drive säilyttää täydet release-handoffit.
+Drive säilyttää täydet release-handoffit.
